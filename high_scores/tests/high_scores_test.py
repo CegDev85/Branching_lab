@@ -21,8 +21,11 @@ class HighScoresTest(unittest.TestCase):
         self.assertEqual(21 ,highest_score(self.scores)) #i created this function in the high scores.py,and it wasnt importing in, import * means all i add are imported now
 
     # Test top three from list of scores
+    def test_top_three_from_list(self):
+        self.assertEqual([21,10,8], top_three(self.scores))
 
     # Test ordered from highest tp lowest
+    def test_ordered_from_highest_to_lowest(self):
 
     # Test top three when there is a tie
 
