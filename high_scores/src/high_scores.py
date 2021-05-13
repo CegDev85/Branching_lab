@@ -3,7 +3,7 @@ def latest(scores):
 
 
 def highest_score(scores):
-    return scores.max()
+    return max(scores)
 
 
 
