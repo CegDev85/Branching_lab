@@ -28,8 +28,18 @@ class HighScoresTest(unittest.TestCase):
     def test_ordered_from_highest_to_lowest(self):
         self.assertEqual([21,10,8,6,5,2], highest_to_lowest(self.scores))
 
-    # Test top three when there is a tie
+    #Test top three when there is a tie
+    def test_top_three_when_tied(self):
+        scores = [21,21,8,21,10,6]
+        self.assertEqual([21,21,21], top_three(scores))
 
     # Test top three when there are less than three
+    def test_top_three_when_only_two_exist(self):
+        scores = [3,7]
+        self.assertEqual([7,3], only_two_results(scores))
+
 
     # Test top three when there is only one
+    def test_top_three_when_only_one_exist(self):
+        scores = [7]
+        self.assertEqual([7], only_one_result(scores))
