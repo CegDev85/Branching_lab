@@ -8,11 +8,7 @@ class CompoundInterest:
 
     def calculate(self, principle, rate, length):
         #return round((principle(1+rate/self.comp_freq)*length*self.comp_freq))
-        return round((principle * pow((1+rate/self.comp_freq), (length*self.comp_freq))),2)
+        return round((principle * pow((1+rate/self.comp_freq), (length*self.comp_freq))), 2)
 
-    # def calculate_with_cont(self, priciple, rate, length, contribution):
-    #     total = priciple
-    #     for n in range(1, (length*12)):
-    #         total = (total*(1+rate))+contribution
-    #     return total
-            
+    def calculate_with_cont(self, principle, rate, length, contribution):
+        return round((self.calculate(principle, rate, length) + contribution * ((pow((1 + rate/self.comp_freq), (length * self.comp_freq)) -1) / (rate/self.comp_freq)) * (1 + rate/self.comp_freq)) , 2)
