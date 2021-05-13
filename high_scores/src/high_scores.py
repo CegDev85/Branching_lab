@@ -10,6 +10,9 @@ def top_three(scores):
     scores.sort(reverse=True)
     return scores[0:3]
  
+def highest_to_lowest(scores):
+    scores.sort(reverse=True)
+    return scores
     
    
 
